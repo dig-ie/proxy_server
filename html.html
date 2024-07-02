@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página com Proxy</title>
+    <title>Página com Link Clicável</title>
     <style>
       body {
-        margin: 0; /* Remove margens padrão do body */
-        padding: 0; /* Remove padding padrão do body */
+        background-color: #f0f0f0; /* Cor de fundo */
       }
       iframe {
-        width: 100%; /* Ocupa 100% da largura do viewport */
-        height: 90vh; /* Ocupa 90% da altura do viewport */
-        border: none; /* Remove a borda do iframe */
-        display: block; /* Garante que o iframe seja exibido como bloco */
+        width: 100%;
+        height: 90vh;
+        border: none;
       }
     </style>
   </head>
   <body>
-    <iframe src="https://proxy-server-vto0.onrender.com"></iframe>
+    <a href="http://localhost:3001/proxy">
+      Clique aqui para visitar o Alto Giro
+    </a>
+    <iframe src="https://proxy-server-1-8abv.onrender.com"></iframe>
   </body>
 </html>
