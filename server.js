@@ -7,13 +7,12 @@ const PORT = process.env.PORT || 3000;
 app.use(
   "/proxy",
   createProxyMiddleware({
-    target: "https://www.altogiro.com.br", // Substitua pelo site que deseja acessar
+    target: "https://www.altogiro.com.br",
     changeOrigin: true,
     pathRewrite: {
-      "^/proxy": "", // Remove '/proxy' da URL
+      "^/proxy": "",
     },
     onProxyReq: (proxyReq, req, res) => {
-      // Remova os cabeçalhos que causam bloqueio de iframe
       proxyReq.removeHeader("X-Frame-Options");
       proxyReq.removeHeader("Content-Security-Policy");
     },
